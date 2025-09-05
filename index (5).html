@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🚀 Real-time Analytics Dashboard</h1>
+            <p>Live system monitoring and data visualization</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="startBtn">▶️ Start Monitoring</button>
+            <button class="btn danger" id="stopBtn">⏸️ Stop Monitoring</button>
+            <button class="btn" id="resetBtn">🔄 Reset Data</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalUsers">0</div>
+                <div class="stat-label">
+                    <span class="status-indicator status-active"></span>
+                    Active Users
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="revenue">$0</div>
+                <div class="stat-label">
+                    <span class="status-indicator status-active"></span>
+                    Revenue Today
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="orders">0</div>
+                <div class="stat-label">
+                    <span class="status-indicator status-warning"></span>
+                    Pending Orders
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="performance">98%</div>
+                <div class="stat-label">
+                    <span class="status-indicator status-active"></span>
+                    System Performance
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-card">
+                <div class="chart-title">📈 Real-time Traffic</div>
+                <canvas id="trafficChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📊 Revenue Analytics</div>
+                <canvas id="revenueChart"></canvas>
+            </div>
+        </div>
+
+        <div class="activity-feed">
+            <h3 style="margin-bottom: 20px; color: #333;">🔔 Recent Activity</h3>
+            <div id="activityList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
